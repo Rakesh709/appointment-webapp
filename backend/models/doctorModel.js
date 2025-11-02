@@ -16,7 +16,7 @@ const doctorSchema = new mongoose.Schema(
       required: true,
     },
     image: { type: String, required: true },
-    specilaity: { type: String, required: true },
+    speciality: { type: String, required: true },
     degree: { type: String, required: true },
     experience: { type: String, required: true },
     about: { type: String, required: true },

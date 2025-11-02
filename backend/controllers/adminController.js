@@ -8,15 +8,15 @@ const addDoctor =  async (req,res) => {
 
     try {
 
-       const { name, email, password, specilaity, degree, experience, about, fees, address } = req.body;
+       const { name, email, password, speciality, degree, experience, about, fees, address } = req.body;
         const imageFile = req.file;
 
-       console.log({name,email,password,specilaity,degree,experience,about,fees,address},imageFile)
+       console.log({name,email,password,speciality,degree,experience,about,fees,address},imageFile)
 
         res.status(200).json({
-      success: true,
-      message: "Doctor data received successfully!",
-      data: { name, email, password, specilaity, degree, experience, about, fees, address },
+        success: true,
+        message: "Doctor data received successfully!",
+        data: { name, email, password, speciality, degree, experience, about, fees, address },
     });
        
         
