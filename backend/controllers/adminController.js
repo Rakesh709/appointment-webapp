@@ -2,15 +2,26 @@
 
 // api for adding Doctor
 
-const addDoctor =  async () => {
+import { log } from "console";
+
+const addDoctor =  async (req,res) => {
 
     try {
 
-       const {name,email,password,specilaity,degree,exprience,about,fees,address } = req.body;
-       
+       const { name, email, password, specilaity, degree, experience, about, fees, address } = req.body;
+        const imageFile = req.file;
 
-    } catch (error) {
+       console.log({name,email,password,specilaity,degree,experience,about,fees,address},imageFile)
+
+        res.status(200).json({
+      success: true,
+      message: "Doctor data received successfully!",
+      data: { name, email, password, specilaity, degree, experience, about, fees, address },
+    });
+       
         
+    } catch (error) {
+        console.log("error")
     }
 }
 
